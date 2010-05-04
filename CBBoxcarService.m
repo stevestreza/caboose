@@ -49,12 +49,15 @@
 - (void)webSocketDidOpen:(WebSocket*)webSocket{
 	CallDelegateMethod(@selector(boxcarServiceDidConnect:));
 	
-	[_boxcarSocket send:[NSString stringWithFormat:
+	NSString *message = [NSString stringWithFormat:
 						 @"{"
-							@"\"action\": \"login\",",
-							@"\"email\": \"%@\",",
-							@"\"password\": \"%@\"",
-						 @"}", self.email, self.password]];
+							@"\"action\": \"login\","
+							@"\"email\": \"%@\","
+							@"\"password\": \"%@\""
+						 @"}", self.email, self.password];
+	NSLog(@"Sending message: %@",message);
+	
+	[_boxcarSocket send:message];
 }
 
 - (void)webSocketDidClose:(WebSocket*)webSocket{
