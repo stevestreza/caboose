@@ -23,7 +23,7 @@
 										   otherButton:nil
 							 informativeTextWithFormat:@"To enable, run in Terminal:\n\n"
 						  @"defaults write com.villainware.caboose boxcarEmail john@example.com\n"
-						  @"defaults write com.villainware.caboose boxcarPassword"];
+						  @"defaults write com.villainware.caboose boxcarPassword myPassword"];
 		[alert runModal];
 		
 		[NSApp terminate:self];
