@@ -3,7 +3,7 @@
 //  Caboose
 //
 //  Created by Steve Streza on 5/3/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Villainware. All rights reserved.
 //
 
 #import "CBBoxcarService.h"
