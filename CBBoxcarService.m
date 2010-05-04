@@ -55,7 +55,6 @@
 							@"\"email\": \"%@\","
 							@"\"password\": \"%@\""
 						 @"}", self.email, self.password];
-	NSLog(@"Sending message: %@",message);
 	
 	[_boxcarSocket send:message];
 }
