@@ -27,6 +27,7 @@
 		1E261C4A118FC99C00255E94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C49118FC99B00255E94 /* CoreFoundation.framework */; };
 		1E261C8D118FD10E00255E94 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C8C118FD10E00255E94 /* Growl.framework */; };
 		1E261C91118FD11100255E94 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C8C118FD10E00255E94 /* Growl.framework */; };
+		1E261C99118FD13700255E94 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 1E261C98118FD13700255E94 /* Growl Registration Ticket.growlRegDict */; };
 		256AC3DA0F4B6AC300CF3369 /* CabooseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CabooseAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -84,6 +85,7 @@
 		1E261BE3118FC03F00255E94 /* CBBoxcarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBoxcarService.m; sourceTree = "<group>"; };
 		1E261C49118FC99B00255E94 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1E261C8C118FD10E00255E94 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		1E261C98118FD13700255E94 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* CabooseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabooseAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* CabooseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabooseAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Caboose_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caboose_Prefix.pch; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1E261C98118FD13700255E94 /* Growl Registration Ticket.growlRegDict */,
 				256AC3F00F4B6AF500CF3369 /* Caboose_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -313,6 +316,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				1E261BC9118FBF1B00255E94 /* AsyncSocket Documentation.html in Resources */,
 				1E261BCC118FBF1B00255E94 /* changes.txt in Resources */,
+				1E261C99118FD13700255E94 /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

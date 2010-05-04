@@ -7,12 +7,15 @@
 //
 
 #import "CabooseAppDelegate.h"
+#import <Growl/Growl.h>
 
 @implementation CabooseAppDelegate
 
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	[GrowlApplicationBridge setGrowlDelegate:self];
+	
 	NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:@"boxcarEmail"];
 	NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:@"boxcarPassword"];
 	
@@ -35,7 +38,13 @@
 }
 
 -(void)boxcarService:(CBBoxcarService *)service receivedNotification:(NSDictionary *)notification{
-	NSLog(@"Ding! %@",[notification objectForKey:@"alert"]);
+	[GrowlApplicationBridge notifyWithTitle:@"Caboose"
+								description:[notification objectForKey:@"alert"]
+						   notificationName:@"PushNotification" 
+								   iconData:nil
+								   priority:0
+								   isSticky:NO 
+							   clickContext:nil];
 }
 
 @end
