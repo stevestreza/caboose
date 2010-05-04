@@ -25,11 +25,27 @@
 		1E261BD2118FBF1B00255E94 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E261BAB118FBF1B00255E94 /* WebSocket.m */; };
 		1E261BE4118FC03F00255E94 /* CBBoxcarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E261BE3118FC03F00255E94 /* CBBoxcarService.m */; };
 		1E261C4A118FC99C00255E94 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C49118FC99B00255E94 /* CoreFoundation.framework */; };
+		1E261C8D118FD10E00255E94 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C8C118FD10E00255E94 /* Growl.framework */; };
+		1E261C91118FD11100255E94 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1E261C8C118FD10E00255E94 /* Growl.framework */; };
 		256AC3DA0F4B6AC300CF3369 /* CabooseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* CabooseAppDelegate.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E261C90118FD10E00255E94 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E261C91118FD11100255E94 /* Growl.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -67,6 +83,7 @@
 		1E261BE2118FC03F00255E94 /* CBBoxcarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBoxcarService.h; sourceTree = "<group>"; };
 		1E261BE3118FC03F00255E94 /* CBBoxcarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBoxcarService.m; sourceTree = "<group>"; };
 		1E261C49118FC99B00255E94 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1E261C8C118FD10E00255E94 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		256AC3D80F4B6AC300CF3369 /* CabooseAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CabooseAppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* CabooseAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CabooseAppDelegate.m; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* Caboose_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caboose_Prefix.pch; sourceTree = "<group>"; };
@@ -84,6 +101,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				1E261C4A118FC99C00255E94 /* CoreFoundation.framework in Frameworks */,
+				1E261C8D118FD10E00255E94 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +148,7 @@
 		1E261B44118FBE9E00255E94 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				1E261C8C118FD10E00255E94 /* Growl.framework */,
 				1E261B76118FBF1A00255E94 /* WebSocket */,
 				1E261B47118FBECE00255E94 /* TouchJSON */,
 			);
@@ -253,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Caboose" */;
 			buildPhases = (
+				1E261C90118FD10E00255E94 /* Copy Frameworks */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
@@ -349,6 +369,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -366,6 +390,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Dependencies\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Caboose_Prefix.pch;
