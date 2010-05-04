@@ -39,6 +39,8 @@
 @property (nonatomic, readonly) NSString *email;
 @property (nonatomic, readonly) NSString *password;
 
+-(id)initWithEmail:(NSString *)anEmail password:(NSString *)aPassword;
+
 -(void)openSession;
 -(void)closeSession;
 -(void)reopenSession;
