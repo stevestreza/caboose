@@ -1,0 +1,6 @@
+[submodule "Dependencies/TouchJSON"]
+	path = Dependencies/TouchJSON
+	url = git://github.com/mrevilme/TouchJSON.git
+[submodule "Dependencies/WebSocket"]
+	path = Dependencies/WebSocket
+	url = git://github.com/erichocean/cocoa-websocket.git
