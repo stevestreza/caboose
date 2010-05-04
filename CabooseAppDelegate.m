@@ -13,7 +13,29 @@
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
+	NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:@"boxcarEmail"];
+	NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:@"boxcarPassword"];
+	
+	if(email == nil || password == nil){
+		NSAlert *alert = [NSAlert alertWithMessageText:@"No email or password" 
+										 defaultButton:@"OK"
+									   alternateButton:nil
+										   otherButton:nil
+							 informativeTextWithFormat:@"To enable, run in Terminal:\n\n"
+						  @"defaults write com.villainware.caboose boxcarEmail john@example.com\n"
+						  @"defaults write com.villainware.caboose boxcarPassword"];
+		[alert runModal];
+		
+		[NSApp terminate:self];
+	}
+
+	boxcar = [[CBBoxcarService alloc] initWithEmail:email
+										   password:password];
+	boxcar.delegate = self;
+}
+
+-(void)boxcarService:(CBBoxcarService *)service receivedNotification:(NSDictionary *)notification{
+	NSLog(@"Ding! %@",[notification objectForKey:@"alert"]);
 }
 
 @end

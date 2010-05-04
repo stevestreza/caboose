@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CBBoxcarService.h"
 
-@interface CabooseAppDelegate : NSObject <NSApplicationDelegate> {
+@interface CabooseAppDelegate : NSObject <NSApplicationDelegate, CBBoxcarDelegate> {
     NSWindow *window;
+
+	CBBoxcarService *boxcar;
 }
 
 @property (assign) IBOutlet NSWindow *window;
