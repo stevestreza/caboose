@@ -13,6 +13,8 @@ Dependencies
 Install
 =======
 
+The easiest way to get Caboose is to download the standalone app from http://github.com/amazingsyco/caboose/downloads. If you wish to compile from source, follow these steps:
+
 1. git clone git://github.com/amazingsyco/caboose.git
 2. cd caboose
 3. git submodule init
