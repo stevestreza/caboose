@@ -32,6 +32,9 @@
 	NSString *_email;
 	NSString *_password;
 	
+	NSString *_appName;
+	NSString *_appVersion;
+	
 	id <CBBoxcarDelegate> _delegate;
 }
 
@@ -39,10 +42,16 @@
 @property (nonatomic, readonly) NSString *email;
 @property (nonatomic, readonly) NSString *password;
 
+@property (nonatomic, copy) NSString *appName;
+@property (nonatomic, copy) NSString *appVersion;
+
 -(id)initWithEmail:(NSString *)anEmail password:(NSString *)aPassword;
 
 -(void)openSession;
 -(void)closeSession;
 -(void)reopenSession;
 
+//utilities
++ (NSString *)hexStringForData:(NSData *)data;
++ (NSString *)hashForPassword:(NSString *)password;
 @end
